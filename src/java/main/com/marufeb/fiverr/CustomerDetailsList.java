@@ -8,6 +8,7 @@ import java.util.Optional;
 
 public class CustomerDetailsList {
     private static final List<CustomerDetails> list = new ArrayList<>();
+
     /**
      * @param givenID the ID of a customer
      * @return the customer’s details if found, exception thrown
