@@ -1,11 +1,13 @@
 package com.marufeb.fiverr;
 
+import com.marufeb.fiverr.exceptions.IllegalCustomerIDExceptions;
+
 public class PrivateCustomerDetails extends CustomerDetails{
     private String fullName;
     private String title;
     private String surname;
 
-    private PrivateCustomerDetails(String id, Address address, String regionalCode, Float totalPrice) throws IllegalCustomerIDExceptions, IllegalAccessException {
+    public PrivateCustomerDetails(String id, Address address, String regionalCode, Float totalPrice) throws IllegalCustomerIDExceptions, IllegalAccessException {
         super(id, address, regionalCode, totalPrice);
     }
 

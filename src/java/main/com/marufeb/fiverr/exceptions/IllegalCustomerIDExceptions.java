@@ -1,4 +1,4 @@
-package com.marufeb.fiverr;
+package com.marufeb.fiverr.exceptions;
 
 public class IllegalCustomerIDExceptions extends Exception {
     public IllegalCustomerIDExceptions(String message) {
