@@ -9,10 +9,12 @@ import java.util.List;
 public class Product {
     private String code;
     private float price;
+    private static List<Product> products;
 
     public Product(String code, float price) {
         this.code = code;
         this.price = price;
+        products.add(this);
     }
 
     public static List<Product> parse(String codes, String ppu) throws InvalidProductCodeException {
@@ -43,6 +45,10 @@ public class Product {
         }
 
         return result;
+    }
+
+    public static Product get(String code) {
+        return products.stream().filter(it-> it.code.equals(code)).findAny().orElse(null);
     }
 
     public String getCode() {
